@@ -1,0 +1,149 @@
+
+
+*{
+    margin: 0px 5px; //m0px + tab
+    padding: 0px; //p0px + tab
+    box-sizing: border-box; //bosi + tab, bobo + tab
+
+    body{
+        font-family: sans-serif;
+
+    }
+}
+
+
+#size{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 35px;
+    color: red;
+}
+
+.container{
+    height: 100vh;
+}
+
+.header{
+    height: 10%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    /* = .header__logo*/
+    &__logo{
+      font-size: 4vw;
+    }  
+    &__menu {
+        display: flex;
+        flex-direction: row;
+        font-size: 2.5vw;
+        gap: 15px;
+    }
+}
+
+.main{
+    height: 80%;
+    //border: 2px solid black;
+
+    display: flex;
+    flex-direction: row;
+
+    &__image{
+        background-image: url('./images/miyaruma.jpg');
+        width: 50%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left center;
+    }
+
+    &__text{
+        width: 50%;
+        
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &-1{
+            font-size: 10vw;
+        }
+        &-2,&-3,&-4{
+            font-size: 5vw;
+        }
+
+    }
+}
+
+.footer{
+    height: 10%;
+    align-items: center;
+    gap: 20px;
+    justify-content: flex-end;
+    margin-right: 10%;
+
+
+    display: flex;
+    flex-direction: row;
+
+    [class ^="footer__"]{
+        img{
+            width: 5.3vw;
+        }
+    }
+    
+}
+
+@media (max-width: 650px){
+    .header{
+        justify-content: center;
+
+        &__logo{
+            font-size: 40px;
+        }
+        &__menu{
+            display: none;
+        }
+    }
+
+    .main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__image{
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            background-size: 100%;
+            background-position: center;
+        }
+        &__text{
+            width: 100%;
+            &-1{
+                display: none;
+            }
+            &-2,&-3,&-4{
+                font-size: 30px;
+            }
+        }
+    }
+
+    .footer{
+
+        justify-content: center;
+        margin: 0px;
+
+        [class ^="footer__"]{
+            img{
+                width: 45px;
+                height: 45px;
+            }
+        }
+    }
+}
+

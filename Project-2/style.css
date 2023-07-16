@@ -1,0 +1,119 @@
+* {
+  margin: 0px 5px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+* body {
+  font-family: sans-serif;
+}
+
+#size {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 35px;
+  color: red;
+}
+
+.container {
+  height: 100vh;
+}
+
+.header {
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* = .header__logo*/
+}
+.header__logo {
+  font-size: 4vw;
+}
+.header__menu {
+  display: flex;
+  flex-direction: row;
+  font-size: 2.5vw;
+  gap: 15px;
+}
+
+.main {
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+}
+.main__image {
+  background-image: url("./images/miyaruma.jpg");
+  width: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+.main__text {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main__text-1 {
+  font-size: 10vw;
+}
+.main__text-2, .main__text-3, .main__text-4 {
+  font-size: 5vw;
+}
+
+.footer {
+  height: 10%;
+  align-items: center;
+  gap: 20px;
+  justify-content: flex-end;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: row;
+}
+.footer [class^=footer__] img {
+  width: 5.3vw;
+}
+
+@media (max-width: 650px) {
+  .header {
+    justify-content: center;
+  }
+  .header__logo {
+    font-size: 40px;
+  }
+  .header__menu {
+    display: none;
+  }
+  .main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main__image {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-size: 100%;
+    background-position: center;
+  }
+  .main__text {
+    width: 100%;
+  }
+  .main__text-1 {
+    display: none;
+  }
+  .main__text-2, .main__text-3, .main__text-4 {
+    font-size: 30px;
+  }
+  .footer {
+    justify-content: center;
+    margin: 0px;
+  }
+  .footer [class^=footer__] img {
+    width: 45px;
+    height: 45px;
+  }
+}/*# sourceMappingURL=style.css.map */

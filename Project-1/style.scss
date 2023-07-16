@@ -1,0 +1,74 @@
+$color-1 : #cdb4db ; //mobile
+$color-2 : #fff1e6 ; //tablet
+$color-3 : #52b788 ; //laptop
+$color-4 : #bee1e6 ; //desktop
+
+$mobile : 576px;
+$tablet : 768px;
+$laptop : 992px;
+$desktop : 1200px;
+
+*{
+    margin: 0px; //m0px + tab
+    padding: 0px; //p0px + tab
+    box-sizing: border-box; //bosi + tab, bobo + tab
+
+    body{
+        font-family: sans-serif;
+        font-size: 35px;
+    }
+}
+
+.container{
+    height: 100vh;
+
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+
+    display: grid;
+    place-content: center;
+    background-color: $color-1;
+}
+
+.text{}
+
+#size{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 35px;
+    color: red;
+}
+
+//, and
+//burger and pizza
+//burger, pizza and coca-cola
+
+@media (max-width : $desktop){
+    .container{
+        background-color: $color-4;
+    }
+}
+
+@media (max-width : $laptop){
+    .container{
+        background-color: $color-3;
+    }
+}
+
+@media (max-width : $tablet){
+    .container{
+        background-color: $color-2;
+    }
+}
+
+@media (max-width: $mobile){
+    //your styles are here
+
+    .container{
+        background-color: $color-1;
+    }
+}
+
